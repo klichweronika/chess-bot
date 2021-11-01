@@ -1,6 +1,6 @@
 # Chess Bot
 
-This Chess Bot project is for playing chess with a bot. The application displays information about previous moves and whose turn is now.
+This Chess Bot project is for playing chess game with a bot. The application displays information about previous moves and whose turn is now.
 
 # The source I used:
 
