@@ -10,21 +10,38 @@
       integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
       crossorigin="anonymous"
     />
-
     <script src="node_modules/chess.js/chess.js"></script>
     <script src="node_modules/@chrisoakman/chessboardjs/dist/chessboard-1.0.0.css"></script>
     <script src="node_modules/@chrisoakman/chessboardjs/dist/chessboard-1.0.0.js"></script>
-    <script src="assets/styles.css"></script>
-    <script src="assets/img/chesspieces/wikipedia"></script>
+    <script src="styles.css"></script>
+    <script src="img/chesspieces/wikipedia"></script>
   </head>
   <body>
-    <div id="myBoard" style="width: 500px; margin: 0 auto"></div>
-    <div class="gameInfo" style="text-align: center; font-size: 2rem">
-      <label class="labelInfo" style=>Status:</label>
-      <div id="status"></div>
-      <label> PGN:</label>
-      <div id="pgn"></div>
-      <button id="resetButton">Reset game</button>
+    <div
+      id="myBoard"
+      style="width: 500px; margin: 0 auto; padding: 2.5rem"
+    ></div>
+
+    <div class="gameInfo" style="text-align: center; font-size: 1.5rem">
+      <label class="labelInfo" style="margin-bottom: 2rem; font-size: 2rem"
+        >Status:</label
+      >
+      <div id="status" style="margin: 1rem"></div>
+      <label labelInfo> PGN:</label>
+      <div id="pgn" style="margin: 1rem"></div>
+      <button
+        id="resetButton"
+        style="
+          background-color: #f0d9b5;
+          border: 3px solid #b58862;
+          border-radius: 0%;
+          width: 8rem;
+          height: 2rem;
+          font-weight: 600;
+        "
+      >
+        Reset game
+      </button>
     </div>
     <script src="main.js"></script>
   </body>
