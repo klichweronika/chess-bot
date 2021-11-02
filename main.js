@@ -6,7 +6,7 @@ let $pgn = $("#pgn");
 let whiteSquareGrey = "#a9a9a9";
 let blackSquareGrey = "#696969";
 
-function onDragStart(source, piece, position, orientation) {
+function onDragStart(piece) {
   if (game.game_over()) return false;
 
   if (
@@ -37,7 +37,6 @@ function onDrop(source, target) {
 
   if (move === null) return "snapback";
 
-  // make random legal move for black
   window.setTimeout(makeRandomMove, 1000);
   updateStatus();
 }
@@ -86,20 +85,16 @@ function greySquare(square) {
   $square.css("background", background);
 }
 
-function onMouseoverSquare(square, piece) {
-  // get list of possible moves for this square
+function onMouseoverSquare(square) {
   var moves = game.moves({
     square: square,
     verbose: true,
   });
 
-  // exit if there are no moves available for this square
   if (moves.length === 0) return;
 
-  // highlight the square they moused over
   greySquare(square);
 
-  // highlight the possible squares for this piece
   for (var i = 0; i < moves.length; i++) {
     greySquare(moves[i].to);
   }
